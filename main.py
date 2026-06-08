@@ -86,7 +86,7 @@ def main_AE(args):#argc, argv):
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu") 
 
 
-    trainimgs = torch.load('./dataset/cifar10_processed.pt', weights_only=False).to(device)[:1000]
+    trainimgs = torch.load('./dataset/cifar10_processed.pt', weights_only=False).to(device)
     trainimgs_src = torch.load('./dataset/cifar10_processed.pt', weights_only=False).to(device)
     testimgs = torch.load('./dataset/cifar10_processed_test.pt', weights_only=False).to(device)
 
@@ -274,7 +274,7 @@ def main_gens(argc, argv):
 
 
     net = md.AutoEnc().to(device)
-    net.load_state_dict(torch.load('./net.pt', map_location=device))[:10000]
+    net.load_state_dict(torch.load('./net.pt', map_location=device)) 
     
     net.enableClp()
     net.enableQua()
@@ -334,7 +334,7 @@ def main_gens(argc, argv):
         showlist.append(make_grid_plus((tempgen[-64:] - tempcls[-64:]).abs()))
 
         
-        plt.clf(); showMatrixImgs(showlist, gs) #, mode='r') # mode r 行优先显示
+        plt.clf(); showMatrixImgs(showlist, gs) #, mode='r') 
         plt.tight_layout(pad=1.2); plt.pause(0.1)
 
         time_e = time.time()
