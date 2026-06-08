@@ -297,7 +297,7 @@ def main_gens(argc, argv):
     genimgs_list = []
     clsimgs_list = []
 
-    psnr_thval  = 35
+    psnr_thval  = 25
     flag = 0 
     sampnum = 64
 
