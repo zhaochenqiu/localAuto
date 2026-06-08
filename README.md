@@ -17,7 +17,17 @@ If you find our code or paper useful for your research, please consider citing o
   year      = {2026}
 }
 ```
+## Quick Start
 
+To make it easier to reproduce our results immediately, the pre-trained autoencoder and pre-generated latent variables are already included in this repository:
+* **Pre-trained Autoencoder:** `net.pt`
+* **Generated Latents:** `lats_uint8.pt`
+
+```
+git clone https://github.com/zhaochenqiu/localAuto.git
+python main.py --generation
+
+```
 
 ## Pipeline & Usage
 ### Step 1: Dataset Preparation
