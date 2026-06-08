@@ -25,7 +25,8 @@ To make it easier to reproduce our results immediately, the pre-trained autoenco
 
 ```
 git clone https://github.com/zhaochenqiu/localAuto.git
-python main.py --generation
+python main.py --dataset 1 
+python main.py --generation 1
 
 ```
 
@@ -42,7 +43,7 @@ python main.py --dataset 1
 Train the autoencoder model using the preprocessed dataset:
 ```
 Bash
-python main.py --autoenc
+python main.py --autoenc 1
 ```
 
 
@@ -50,7 +51,7 @@ python main.py --autoenc
 Generate or extract the latent representations/embeddings from the trained autoencoder:
 ```
 Bash
-python main.py --latent
+python main.py --latent 1
 ```
 
 
@@ -59,7 +60,7 @@ python main.py --latent
 Generate synthetic images for evaluation:
 ```
 Bash
-python main.py --generation
+python main.py --generation 1
 ```
 
 Runtime Notice: Generating a sufficient number of images to calculate the FID (Fréchet Inception Distance) score against the original CIFAR-10 dataset takes approximately 2 hours on a single NVIDIA RTX 4090 GPU.
