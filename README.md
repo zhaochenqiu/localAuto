@@ -16,10 +16,10 @@ If you find our code or paper useful for your research, please consider citing o
   booktitle = {International Conference on Pattern Recognition (ICPR)}, 
   year      = {2026}
 }
+```
 
 
 ## Pipeline & Usage
-
 ### Step 1: Dataset Preparation
 Download, preprocess, and normalize the CIFAR-10 dataset to $[-1, 1]$. The processed data will be saved locally.
 ```
